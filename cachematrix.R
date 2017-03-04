@@ -6,14 +6,14 @@
 #getInverse():get the Inverse of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
-  m <- NULL
+  inv <- NULL
   set <- function(y) {
     x <<- y
-    m <<- NULL
+    inv <<- NULL
   }
   get <- function() x
   
-  setInverse <- function(m) inv<<-solve(m)
+  setInverse <- function(m) inv<<-m
   getInverse <- function() inv
   list(set = set, get = get,
        setInverse = setInverse,
